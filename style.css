@@ -1,0 +1,198 @@
+/* Basic Styling - Feel free to modify */
+
+:root {
+    --primary-color: #4169e1; /* Bootstrap primary blue */
+    --secondary-color: #6c757d; /* Bootstrap secondary gray */
+    --light-color: #f8f9fa; /* Bootstrap light */
+    --dark-color: #343a40; /* Bootstrap dark */
+    --body-font: 'Lato', sans-serif;
+    --heading-font: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+    font-family: var(--heading-font);
+    font-weight: 700;
+}
+
+.navbar-brand {
+    color: var(--primary-color) !important; /* Ensure brand color */
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1920x600?text=Hero+Background') no-repeat center center;
+    background-size: cover;
+    min-height: 70vh; /* Adjust height as needed */
+    color: #fff;
+}
+
+.hero-section h1 {
+    color: #fff; /* Ensure heading is white */
+}
+
+
+.section-title {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+#services .card {
+    border: none; /* Remove default card border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#services .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+#services .fa-3x { /* Style service icons */
+    margin-bottom: 1rem;
+}
+/*** Header ***/
+.carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, .1);
+    z-index: 1;
+    color: #007bff;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 15%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 3.5rem;
+    background-color: var(--primary);
+    border: 15px solid var(--primary);
+}
+
+@media (max-width: 768px) {
+    #header-carousel .carousel-item {
+        position: relative;
+        min-height: 450px;
+    }
+    
+    #header-carousel .carousel-item img {
+        position: absolute;
+        width: 80%;
+        height: 80%;
+        object-fit: cover;
+    }
+}
+
+.page-header {
+    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)), url(/img/download\ \(1\).jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.page-header .breadcrumb-item+.breadcrumb-item::before {
+    color: var(--light);
+}
+
+.page-header .breadcrumb-item,
+.page-header .breadcrumb-item a {
+    font-size: 18px;
+    color: var(--light);
+}
+
+
+footer {
+    background-color: var(--dark-color);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Add simple smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Style form controls focus */
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+    background-color: var(--primary-color); /* Keep color on hover */
+    border-color: var(--primary-color);
+}
+
+/* Custom CSS for the Services Section */
+
+/* Define primary color if not already defined or needs overriding */
+/* This ensures the text-primary class uses this color */
+:root {
+    --bs-primary: #007bff; /* Example: Default Bootstrap primary color */
+    /* Replace with your theme's primary color if needed */
+  }
+  
+  .text-primary {
+    color: var(--bs-primary) !important; /* Ensure text-primary uses the variable */
+  }
+  
+  
+  /* Style for the section title */
+  .section-title {
+    position: relative;
+    padding-bottom: 15px; /* Add space below title for underline */
+  }
+  
+  .section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 60px; /* Length of the underline */
+    background-color: var(--bs-primary); /* Underline color */
+    border-radius: 2px;
+  }
+  
+  /* Card Hover Effect */
+  /* Adds a smooth transition for transform and box-shadow */
+  .card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: none; /* Remove default card border if desired */
+  }
+  
+  /* Style when hovering over a card */
+  .card:hover {
+    transform: translateY(-5px); /* Lifts the card up by 5px */
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; /* Increases the shadow */
+  }
+  
+  /* Optional: Adjust padding within the card body if needed */
+  .card-body {
+      padding: 1.5rem; /* Default Bootstrap padding, good standard */
+  }
+  
+  /* Icon styling (Bootstrap classes handle size and color, no extra CSS usually needed here) */
+  /* .card-body .fas {
+      color: var(--bs-primary);
+  } */ /* This is already handled by the text-primary class in the HTML */
